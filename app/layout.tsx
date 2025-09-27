@@ -1,5 +1,7 @@
 import React from "react";
 import "../assets/styles/global.css";
+import NavBar from "@/components/NavBar";
+
 type MainLayoutProps = React.PropsWithChildren<{}>;
 
 export const metadata = {
@@ -10,7 +12,12 @@ export const metadata = {
 const Mainlayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <NavBar />
+        <main> 
+        {children}
+         </main>
+        </body>
     </html>
   );
 };
