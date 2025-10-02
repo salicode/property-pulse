@@ -1,6 +1,7 @@
 import React from "react";
 import "../assets/styles/global.css";
 import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 
 type MainLayoutProps = React.PropsWithChildren<{}>;
 
@@ -14,9 +15,11 @@ const Mainlayout: React.FC<MainLayoutProps> = ({ children }) => {
     <html lang="en">
       <body>
         <NavBar />
+        
         <main> 
         {children}
          </main>
+        <Footer />
         </body>
     </html>
   );

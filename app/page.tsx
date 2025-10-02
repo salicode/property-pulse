@@ -1,14 +1,17 @@
 import React from "react";
 import Link from "next/link";
-
+import Hero from "@/components/Hero";
+import InfoBoxes from "@/components/InfoBoxes";
+import HomeProperties from "@/components/HomeProperties";
+import connectToDatabase from "../config/database";
 const HomePage = () => {
+  console.log(process.env.MONGO_URI);
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Welcome to the Home Page</h1>
-      <Link href="/properties" className="text-blue-500 underline">
-        Go to Properties
-      </Link>
-    </div>
+    <>
+      <Hero />
+      <InfoBoxes />
+      <HomeProperties />
+    </>
   );
 };
 
