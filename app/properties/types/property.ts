@@ -18,6 +18,7 @@ export interface Rates {
 }
 
 export interface Property {
+  _id?: string; 
   owner: string;
   name: string;
   type: string;
