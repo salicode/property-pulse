@@ -2,6 +2,7 @@ import React from "react";
 import "../assets/styles/global.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import AuthProvider from "@/components/AuthProvider";
 
 type MainLayoutProps = React.PropsWithChildren<{}>;
 
@@ -12,6 +13,7 @@ export const metadata = {
 };
 const Mainlayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
+    <AuthProvider>
     <html lang="en">
       <body>
         <NavBar />
@@ -22,6 +24,7 @@ const Mainlayout: React.FC<MainLayoutProps> = ({ children }) => {
         <Footer />
         </body>
     </html>
+    </AuthProvider>
   );
 };
 
