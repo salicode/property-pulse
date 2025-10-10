@@ -13,18 +13,20 @@ export const metadata = {
 };
 const Mainlayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
-    <AuthProvider>
+    
     <html lang="en">
       <body>
+        <AuthProvider>
         <NavBar />
         
         <main> 
         {children}
          </main>
         <Footer />
+         </AuthProvider>
         </body>
     </html>
-    </AuthProvider>
+   
   );
 };
 

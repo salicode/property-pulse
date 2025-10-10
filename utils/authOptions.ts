@@ -1,11 +1,9 @@
-
-
 import GoogleProvider from "next-auth/providers/google";
 import { AuthOptions } from "next-auth";
 import connectToDatabase from "@/config/database";
 import User from "@/models/User";
 
-// Validate environment variables
+
 if (!process.env.GOOGLE_CLIENT_ID) {
   throw new Error('GOOGLE_CLIENT_ID is not set');
 }
